@@ -1,0 +1,12 @@
+C:\workplace\Noia_Aleatoria\Noia.Data\bin\Debug\net10.0\Noia.Data.deps.json
+C:\workplace\Noia_Aleatoria\Noia.Data\bin\Debug\net10.0\Noia.Data.dll
+C:\workplace\Noia_Aleatoria\Noia.Data\bin\Debug\net10.0\Noia.Data.pdb
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.AssemblyInfoInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.AssemblyInfo.cs
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.csproj.CoreCompileInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.sourcelink.json
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.dll
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\refint\Noia.Data.dll
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\Noia.Data.pdb
+C:\workplace\Noia_Aleatoria\Noia.Data\obj\Debug\net10.0\ref\Noia.Data.dll

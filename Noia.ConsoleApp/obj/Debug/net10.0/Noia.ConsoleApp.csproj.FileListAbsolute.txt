@@ -1,0 +1,15 @@
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\bin\Debug\net10.0\Noia.ConsoleApp.exe
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\bin\Debug\net10.0\Noia.ConsoleApp.deps.json
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\bin\Debug\net10.0\Noia.ConsoleApp.runtimeconfig.json
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\bin\Debug\net10.0\Noia.ConsoleApp.dll
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\bin\Debug\net10.0\Noia.ConsoleApp.pdb
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.AssemblyInfoInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.AssemblyInfo.cs
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.sourcelink.json
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.dll
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\refint\Noia.ConsoleApp.dll
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.pdb
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\Noia.ConsoleApp.genruntimeconfig.cache
+C:\workplace\Noia_Aleatoria\Noia.ConsoleApp\obj\Debug\net10.0\ref\Noia.ConsoleApp.dll

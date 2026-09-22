@@ -1,0 +1,5 @@
+C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfoInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfo.cs
+C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.csproj.CoreCompileInputs.cache
+C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.sourcelink.json

@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Noia.Business/Noia.Business.csproj" />
+  <Project Path="Noia.ConsoleApp/Noia.ConsoleApp.csproj" />
+  <Project Path="Noia.Data/Noia.Data.csproj" />
+  <Project Path="Noia.Model/Noia.Model.csproj" />
+  <Project Path="Noia.Service/Noia.Service.csproj" />
+</Solution>
