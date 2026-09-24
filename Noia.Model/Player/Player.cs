@@ -1,7 +1,10 @@
+using Noia.Skills;
+
 namespace Noia.PlayerNS
 {
     public class Player
     {
+        public int IdPlayer { get; set; }
         public string Name { get; set; }
         public int Level { get; set; }
         public int Experience { get; set; }
@@ -9,8 +12,8 @@ namespace Noia.PlayerNS
         public int Mana { get; set; }
         public int Armor { get; set; }
         public int MagicResistance { get; set; }
-        public List<Attack> attacks { get; set; }
-        public List<Spell> spells { get; set; }
+        public List<PlayerAttack> PlayerAttacks { get; set; } = new();
+        public List<PlayerSpell> PlayerSpells { get; set; } = new();
 
         public Player(string name)
         {
@@ -21,17 +24,6 @@ namespace Noia.PlayerNS
             Mana = 50;
             Armor = 5;
             MagicResistance = 5;
-            attacks = new List<Attack>();
-            spells = new List<Spell>();
-
-            Attack basicAttack = new()
-            {
-                Name = "Basic Attack",
-                Damage = 10,
-                BaseCooldown = 0,
-                CurrentCooldown = 0
-            };
-            attacks.Add(basicAttack);
         }
 
         public void LevelUp()
