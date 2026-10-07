@@ -7,6 +7,8 @@ namespace Noia.Combat
 
     public class Fight
     {
+
+        
         public void StartFight(Player player, Monster monster)
         {
             Console.Clear();
@@ -22,18 +24,26 @@ namespace Noia.Combat
 
             Console.WriteLine("\n===============================================================");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
-            while (choice != 1 && choice != 2)
+            string choice = Console.ReadLine();
+            if (!int.TryParse(choice, out int choiceValue))
+            {
+                choiceValue = 0;
+            }
+            while (choiceValue != 1 && choiceValue != 2)
             {
                 Console.WriteLine("Invalid choice. Please choose again.");
-                choice = Convert.ToInt32(Console.ReadLine());
+                choice = Console.ReadLine();
+                if (!int.TryParse(choice, out choiceValue))
+                {
+                    choiceValue = 0;
+                }
             }
 
-            if (choice == 1)
+            if (choiceValue == 1)
             {
                 DuringFight(player, monster);
             }
-            else if (choice == 2)
+            else if (choiceValue == 2)
             {
                 Console.WriteLine("You have fled the battle.");
             }
@@ -49,9 +59,9 @@ namespace Noia.Combat
                 Console.WriteLine("===============================================================");
                 Console.WriteLine($"{monster.CombatMessage}");
 
-                Console.WriteLine($"{monster.Name} \nLevel: {monster.Level} \nHealth: {monster.Health}");
+                Console.WriteLine($"\n{monster.Name} \nLevel: {monster.Level} \nHealth: {monster.Health}");
 
-                Console.WriteLine($"{player.Name} \nLevel: {player.Level} \nHealth: {player.Health} \nMana: {player.Mana}");
+                Console.WriteLine($"\n{player.Name} \nLevel: {player.Level} \nHealth: {player.Health} \nMana: {player.Mana}");
 
                 Console.WriteLine("\nWhat will you do?");
                 Console.WriteLine("1. Attack");
@@ -62,17 +72,42 @@ namespace Noia.Combat
 
                 Console.WriteLine("\n===============================================================");
 
-                int choice = Convert.ToInt32(Console.ReadLine());
-                while (choice < 1 || choice > 5)
+                string choice = Console.ReadLine() ?? "0";
+                if (!int.TryParse(choice, out int choiceValue))
+                {
+                    choiceValue = 0;
+                }
+                while (choiceValue < 1 || choiceValue > 5)
                 {
                     Console.WriteLine("Invalid choice. Please choose again.");
-                    choice = Convert.ToInt32(Console.ReadLine());
+                    choice = Console.ReadLine() ?? "0";
+                    if (!int.TryParse(choice, out choiceValue))
+                    {
+                        choiceValue = 0;
+                    }
                 }
 
-                switch (choice)
+                switch (choiceValue)
                 {
                     case 1:
                         PlayerChooseAttack(player, out Attack selectedAttack);
+                        PlayerAttack(selectedAttack, monster);
+                        if (monster.Health <= 0)
+                        {
+                            Console.WriteLine($"\nYou have defeated {monster.Name}!");
+                            player.GainExperienceCombat(monster);
+                            return;
+                        }
+                        else
+                        {
+                            MonsterAttack(player, monster);
+                            ReduceMonsterAttackCooldowns(monster);
+                            if (player.Health <= 0)
+                            {
+                                Console.WriteLine($"\nYou have been defeated by {monster.Name}!");
+                                return;
+                            }
+                        }
                         break;
                     case 2:
                         // Implement spell logic here
@@ -92,29 +127,86 @@ namespace Noia.Combat
 
         public void PlayerChooseAttack(Player player, out Attack selectedAttack)
         {
-            Console.WriteLine("Which attack will you use?\n");
-            for (int i = 0; i < player.attacks.Count; i++)
+            Console.WriteLine("\nWhich attack will you use?\n");
+            int atkNum = 1;
+            foreach (var attackChoice in player.PlayerAttacks)
             {
-                Console.WriteLine($"{i + 1}. {player.attacks[i].Name} - Cooldown(Current/On use): {player.attacks[i].CurrentCooldown}/{player.attacks[i].BaseCooldown}");
+                Console.WriteLine($"{atkNum} - {attackChoice.Name}");
+                atkNum++;
             }
-
-            int choice = Convert.ToInt32(Console.ReadLine());
-            while (choice < 1 || choice > player.attacks.Count)
+            string choice = Console.ReadLine() ?? "0";
+            if (!int.TryParse(choice, out int choiceValue))
+            {
+                choiceValue = 0;
+            }
+            while (choiceValue < 1 || choiceValue > player.PlayerAttacks.Count)
             {
                 Console.WriteLine("Invalid choice. Please choose again.");
-                choice = Convert.ToInt32(Console.ReadLine());
+                choice = Console.ReadLine() ?? "0";
+                if (!int.TryParse(choice, out choiceValue))
+                {
+                    choiceValue = 0;
+                }
             }
 
-            selectedAttack = player.attacks[choice - 1];
+            selectedAttack = player.PlayerAttacks[choiceValue - 1];
         }
 
         public void PlayerAttack(Attack attack, Monster monster)
         {
-            Console.WriteLine($"You attack with {attack.Name}");
+            Console.WriteLine($"\nYou attack with {attack.Name}");
 
-            Console.WriteLine($"{monster.Name} takes {attack.Damage - monster.Armor} damage!");
+            Console.WriteLine($"\n{monster.Name} takes {attack.Damage - monster.Armor} damage!");
 
             monster.Health -= attack.Damage - monster.Armor;
+
+            attack.CurrentCooldown = attack.BaseCooldown;
+
+            Console.WriteLine($"\n{monster.Name} has {monster.Health} health remaining.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
-    }
+
+        private Attack? ChooseMonsterAttack(Monster monster)
+        {
+            var availableAttacks = monster.MonsterAttacks
+                .Where(attack => attack.CurrentCooldown == 0)
+                .ToList();
+
+            if (availableAttacks.Count == 0)
+                return null;
+
+            return availableAttacks[Random.Shared.Next(availableAttacks.Count)];
+        }
+
+        public void MonsterAttack(Player player, Monster monster)
+        {
+            var attack = ChooseMonsterAttack(monster);
+            if (attack == null)
+            {
+                Console.WriteLine($"\n{monster.Name} has no available attacks and skips its turn.");
+                return;
+            }
+            Console.WriteLine($"\n{attack.Name} is used by {monster.Name}");
+
+            Console.WriteLine($"\n{player.Name} takes {attack.Damage - player.Armor} damage!");
+
+            player.Health -= attack.Damage - player.Armor;
+
+            attack.CurrentCooldown = attack.BaseCooldown;
+
+            Console.WriteLine($"\nYou have {player.Health} health remaining.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+        }
+
+        private void ReduceMonsterAttackCooldowns(Monster monster)
+        {
+            foreach (var attack in monster.MonsterAttacks)
+            {
+                if (attack.CurrentCooldown > 0)
+                    attack.CurrentCooldown--;
+            }
+        }
+    } 
 }

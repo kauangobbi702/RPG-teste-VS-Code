@@ -1,3 +1,5 @@
+using Noia.Skills;
+
 namespace Noia.MonsterNS
 {
 
@@ -9,8 +11,8 @@ namespace Noia.MonsterNS
         public int Mana { get; set; }
         public int Armor { get; set; }
         public int MagicResistance { get; set; }
-        public List<Attack> attacks { get; set; }
-        public List<Spell> spells { get; set; }
+        public List<Attack> MonsterAttacks { get; set; } = new();
+        public List<Spell> MonsterSpells { get; set; } = new();
         public int ExperienceReward { get; set; }
         public string CombatMessage { get; set; }
     }

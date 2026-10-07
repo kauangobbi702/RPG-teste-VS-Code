@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\workplace\\Noia_Aleatoria\\Noia.Model\\Noia.Model.csproj",
+      "projectUniqueName": "C:\\workplace\\RPG_Teste\\Noia.Model\\Noia.Model.csproj",
       "projectName": "Noia.Model",
-      "projectPath": "C:\\workplace\\Noia_Aleatoria\\Noia.Model\\Noia.Model.csproj",
+      "projectPath": "C:\\workplace\\RPG_Teste\\Noia.Model\\Noia.Model.csproj",
       "packagesPath": "C:\\Users\\Prog_Sis\\.nuget\\packages\\",
-      "outputPath": "C:\\workplace\\Noia_Aleatoria\\Noia.Model\\obj\\",
+      "outputPath": "C:\\workplace\\RPG_Teste\\Noia.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Prog_Sis\\AppData\\Roaming\\NuGet\\NuGet.Config"

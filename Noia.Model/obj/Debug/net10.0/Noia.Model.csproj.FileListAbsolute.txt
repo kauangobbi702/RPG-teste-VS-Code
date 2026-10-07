@@ -3,3 +3,15 @@ C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfo
 C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfo.cs
 C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.csproj.CoreCompileInputs.cache
 C:\workplace\Noia_Aleatoria\Noia.Model\obj\Debug\net10.0\Noia.Model.sourcelink.json
+C:\workplace\RPG_Teste\Noia.Model\bin\Debug\net10.0\Noia.Model.deps.json
+C:\workplace\RPG_Teste\Noia.Model\bin\Debug\net10.0\Noia.Model.dll
+C:\workplace\RPG_Teste\Noia.Model\bin\Debug\net10.0\Noia.Model.pdb
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfoInputs.cache
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.AssemblyInfo.cs
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.csproj.CoreCompileInputs.cache
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.sourcelink.json
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.dll
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\refint\Noia.Model.dll
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\Noia.Model.pdb
+C:\workplace\RPG_Teste\Noia.Model\obj\Debug\net10.0\ref\Noia.Model.dll

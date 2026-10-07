@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\workplace\\Noia_Aleatoria\\Noia.Business\\Noia.Business.csproj": {}
+    "C:\\workplace\\RPG_Teste\\Noia.Business\\Noia.Business.csproj": {}
   },
   "projects": {
-    "C:\\workplace\\Noia_Aleatoria\\Noia.Business\\Noia.Business.csproj": {
+    "C:\\workplace\\RPG_Teste\\Noia.Business\\Noia.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\workplace\\Noia_Aleatoria\\Noia.Business\\Noia.Business.csproj",
+        "projectUniqueName": "C:\\workplace\\RPG_Teste\\Noia.Business\\Noia.Business.csproj",
         "projectName": "Noia.Business",
-        "projectPath": "C:\\workplace\\Noia_Aleatoria\\Noia.Business\\Noia.Business.csproj",
+        "projectPath": "C:\\workplace\\RPG_Teste\\Noia.Business\\Noia.Business.csproj",
         "packagesPath": "C:\\Users\\Prog_Sis\\.nuget\\packages\\",
-        "outputPath": "C:\\workplace\\Noia_Aleatoria\\Noia.Business\\obj\\",
+        "outputPath": "C:\\workplace\\RPG_Teste\\Noia.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Prog_Sis\\AppData\\Roaming\\NuGet\\NuGet.Config"
