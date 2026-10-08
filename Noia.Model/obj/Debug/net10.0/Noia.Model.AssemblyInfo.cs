@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Noia.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0181e226948cb1366667ddf72b8df4bd29949202")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20e75db178744f28a249a64ed21ee3b775b9a176")]
 [assembly: System.Reflection.AssemblyProductAttribute("Noia.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Noia.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

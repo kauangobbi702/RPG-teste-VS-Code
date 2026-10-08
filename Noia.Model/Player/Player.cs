@@ -11,6 +11,7 @@ namespace Noia.PlayerNS
         public int ExperienceToNextLevel { get; set; }
         public int Health { get; set; }
         public int Mana { get; set; }
+        public int ManaRegen { get; set; }
         public int Armor { get; set; }
         public int MagicResistance { get; set; }
         public List<Attack> PlayerAttacks { get; set; } = new();
@@ -24,6 +25,7 @@ namespace Noia.PlayerNS
             ExperienceToNextLevel = 100;
             Health = 100;
             Mana = 50;
+            ManaRegen = 5;
             Armor = 5;
             MagicResistance = 10;
 
